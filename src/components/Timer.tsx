@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card, Icon, Statistic } from "semantic-ui-react";
 import { useTimer } from "../hooks/useTimer";
+import './Timer.css';
 
 type Props = {
   timeLeft: number;
