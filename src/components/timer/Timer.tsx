@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card, Icon, Statistic } from "semantic-ui-react";
-import { useTimer } from "../hooks/useTimer";
-import './Timer.css';
+import { useTimer } from "../../hooks/useTimer";
+import "./Timer.css";
 
 type Props = {
   timeLeft: number;
@@ -19,7 +19,10 @@ const Component = ({
   <Card>
     <Statistic className="number-board">
       <Statistic.Label>time</Statistic.Label>
-      <Statistic.Value className={isPrime ? "prime-number" : undefined} data-testid="time-left">
+      <Statistic.Value
+        className={isPrime ? "prime-number" : undefined}
+        data-testid="time-left"
+      >
         {timeLeft}
       </Statistic.Value>
     </Statistic>

@@ -1,5 +1,5 @@
-import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
-import { getPrimes } from '../math';
+import { useState, useCallback, useMemo, useRef, useEffect } from "react";
+import { getPrimes } from "../lib/math";
 
 export const useTimer = (limit: number) => {
   const [timeLeft, setTimeLeft] = useState(limit);

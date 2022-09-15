@@ -1,6 +1,6 @@
-import React from 'react';
-import Timer from './components/Timer';
-import './App.css';
+import React from "react";
+import Timer from "./components/timer/Timer";
+import "./App.css";
 
 const App = () => (
   <div className="container">
