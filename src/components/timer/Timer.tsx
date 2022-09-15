@@ -27,7 +27,7 @@ const Component = ({
       </Statistic.Value>
     </Statistic>
     <Card.Content>
-      <Button color="red" fluid onClick={reset}>
+      <Button color="red" fluid onClick={reset} data-testid="reset">
         <Icon name="redo" />
         Reset
       </Button>
@@ -35,10 +35,8 @@ const Component = ({
   </Card>
 );
 
-const Container = ({ limit }: ContainerProps) => {
-  const { timeLeft, isPrime, reset } = useTimer(limit);
-
-  return <Component timeLeft={timeLeft} isPrime={isPrime} reset={reset} />;
-};
+const Container = ({ limit }: ContainerProps) => (
+  <Component {...useTimer(limit)} />
+);
 
 export default Container;
